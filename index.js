@@ -15,7 +15,7 @@ qrFormEl.addEventListener("submit",(event)=>{
 
     const formData = new FormData(qrFormEl);
     const text = formData.get("qrlink")
-    const qrCodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=$text'
+    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${text}`;
 
     renderQRcode(qrCodeUrl);
 });
